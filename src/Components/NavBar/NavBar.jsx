@@ -1,9 +1,12 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { GiSelfLove } from "react-icons/gi";
+import { useContext } from "react";
+import { ListProvider } from "../../Provider/Provider";
 
 export default function NavBar() {
   const location = useLocation();
+  const {cart, wish} = useContext(ListProvider);
   const navs = [
     { id: 1, path: "/home", name: "Home" },
     { id: 2, path: "/statistics", name: "Statistics" },
@@ -68,10 +71,10 @@ export default function NavBar() {
       </div>
       <div className="navbar-end gap-3">
         <a className="btn text-xl">
-          <MdOutlineShoppingCart />{" "}
+          <MdOutlineShoppingCart />{cart.length}
         </a>
         <a className="btn text-xl">
-          <GiSelfLove />
+          <GiSelfLove />{wish.length}
         </a>
       </div>
     </div>
