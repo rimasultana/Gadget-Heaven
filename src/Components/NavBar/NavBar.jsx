@@ -1,24 +1,33 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { GiSelfLove } from "react-icons/gi";
 
 export default function NavBar() {
+  const location = useLocation();
+  const navs = [
+    { id: 1, path: "/home", name: "Home" },
+    { id: 2, path: "/statistics", name: "Statistics" },
+    { id: 3, path: "/dashboard", name: "Dashboard" },
+  ];
   const links = (
     <>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/statistics">Statistics</NavLink>
-      </li>
-      <li>
-        <NavLink to="/dashboard">Dashboard</NavLink>
-      </li>
+      {navs.map(({ id, path, name }) => (
+        <li key={id}>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { backgroundColor: "purple" } : {}
+            }
+            to={path}
+          >
+            {name}
+          </NavLink>
+        </li>
+      ))}
     </>
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar w-4/5 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -44,16 +53,26 @@ export default function NavBar() {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+        <a
+          className={`btn btn-ghost text-3xl font-bold hidden lg:block ${
+            location.pathname === "/home" ? "text-white" : ""
+          }`}
+        >
+          Gadget Heaven
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
+        <ul className={`menu menu-horizontal px-1 ${
+            location.pathname === "/home" ? "text-white" : ""
+          }`}>{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn"><MdOutlineShoppingCart /> </a>
-        <a className="btn"><GiSelfLove /></a>
+      <div className="navbar-end gap-3">
+        <a className="btn text-xl">
+          <MdOutlineShoppingCart />{" "}
+        </a>
+        <a className="btn text-xl">
+          <GiSelfLove />
+        </a>
       </div>
     </div>
   );

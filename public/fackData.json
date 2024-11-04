@@ -1,0 +1,206 @@
+[
+  {
+    "product_id": "L001",
+    "product_title": "Apple MacBook Pro 16-inch",
+    "product_image": "https://i.ibb.co.com/9sBHKS7/laptop-device-with-minimalist-monochrome-background.jpg",
+    "category": "MacBook",
+    "price": 2499,
+    "description": "Powerful MacBook Pro with M2 Max chip, ideal for professionals.",
+    "specification": [
+      "16-inch Liquid Retina XDR display",
+      "Apple M2 Max chip",
+      "32GB RAM, 1TB SSD storage",
+      "Battery life up to 21 hours",
+      "Six-speaker sound system"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy Z Fold 5",
+    "product_image": "https://i.ibb.co.com/dr0WdCd/3183794.jpg",
+    "category": "Phones",
+    "price": 1799,
+    "description": "Samsung’s latest foldable phone with advanced multitasking features.",
+    "specification": [
+      "7.6-inch foldable Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 2",
+      "Triple-camera (50MP Main, 12MP Ultrawide, 10MP Telephoto)",
+      "5G compatible",
+      "Up to 512GB storage"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "A003",
+    "product_title": "Apple AirPods Pro 2nd Gen",
+    "product_image": "https://i.ibb.co.com/TrkbCfm/wireless-earbuds-with-neon-cyberpunk-style-lighting.jpg",
+    "category": "Accessories",
+    "price": 249,
+    "description": "Noise-canceling AirPods with immersive sound and Spatial Audio.",
+    "specification": [
+      "Active Noise Cancellation",
+      "Adaptive Transparency",
+      "MagSafe Charging",
+      "Up to 6 hours of listening time",
+      "IPX4 sweat and water resistance"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "S004",
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://i.ibb.co.com/pdvjXzZ/smartwatch-screen-digital-device.jpg",
+    "category": "Smart Watches",
+    "price": 399,
+    "description": "The latest Apple Watch with new health sensors and faster performance.",
+    "specification": [
+      "Always-on Retina display",
+      "S9 SiP",
+      "Blood Oxygen and ECG apps",
+      "Water resistant up to 50m",
+      "Up to 18 hours of battery life"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "L005",
+    "product_title": "Dell XPS 13",
+    "product_image": "https://i.ibb.co.com/pxDXzVY/still-life-books-versus-technology.jpg",
+    "category": "Laptops",
+    "price": 1299,
+    "description": "Ultra-portable Dell XPS 13 with InfinityEdge display and Intel Evo platform.",
+    "specification": [
+      "13.4-inch FHD+ InfinityEdge display",
+      "Intel Core i7 12th Gen",
+      "16GB RAM, 512GB SSD",
+      "Intel Iris Xe Graphics",
+      "Battery life up to 12 hours"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P006",
+    "product_title": "lenovo",
+    "product_image": "https://i.ibb.co.com/NSLYfkV/334541-PA888-X-380.jpg",
+    "category": "Laptops",
+    "price": 1099,
+    "description": "iPhone 14 Pro with A16 Bionic chip and ProMotion display.",
+    "specification": [
+      "6.1-inch Super Retina XDR display",
+      "A16 Bionic chip",
+      "48MP Main camera",
+      "Up to 1TB storage",
+      "Emergency SOS via satellite"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "A007",
+    "product_title": "Samsung Galaxy Buds 2 Pro",
+    "product_image": "https://i.ibb.co.com/JKZfGZN/rendering-smart-home-device.jpg",
+    "category": "Accessories",
+    "price": 199,
+    "description": "True wireless earbuds with Active Noise Cancellation and 24-bit audio.",
+    "specification": [
+      "Active Noise Cancellation",
+      "IPX7 water resistance",
+      "Hi-Fi audio",
+      "5 hours of playtime (ANC on)",
+      "Wireless charging support"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "S008",
+    "product_title": "Garmin Forerunner 955",
+    "product_image": "https://i.ibb.co.com/GndXwG6/3736581.jpg",
+    "category": "Smart Watches",
+    "price": 499,
+    "description": "GPS running watch with advanced training metrics and long battery life.",
+    "specification": [
+      "1.3-inch display",
+      "Multi-band GNSS support",
+      "Sleep and stress tracking",
+      "Up to 15 days battery life",
+      "Water resistance up to 50m"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "L009",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://i.ibb.co.com/C1tpLRz/view-3d-laptop-device-with-screen-keyboard.jpg",
+    "category": "Laptops",
+    "price": 1499,
+    "description": "2-in-1 laptop with touchscreen and convertible design.",
+    "specification": [
+      "13.5-inch OLED display",
+      "Intel Core i7 13th Gen",
+      "16GB RAM, 512GB SSD",
+      "Bang & Olufsen speakers",
+      "Up to 12 hours battery life"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "M010",
+    "product_title": "MacBook Air M2",
+    "product_image": "https://i.ibb.co.com/qM92hZN/workplace-with-laptop.jpg",
+    "category": "MacBook",
+    "price": 1199,
+    "description": "Lightweight MacBook Air with Apple’s M2 chip and a fanless design.",
+    "specification": [
+      "13.6-inch Liquid Retina display",
+      "Apple M2 chip",
+      "8GB RAM, 512GB SSD",
+      "Up to 18 hours battery life",
+      "1080p FaceTime HD camera"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P011",
+    "product_title": "Google Pixel 7",
+    "product_image": "https://i.ibb.co.com/pW0YxQH/new-cell-phone-colorful-background.jpg",
+    "category": "Phones",
+    "price": 699,
+    "description": "Pixel 7 with Google Tensor G2 chip and advanced AI-powered features.",
+    "specification": [
+      "6.3-inch OLED display",
+      "Google Tensor G2",
+      "50MP main camera",
+      "Up to 256GB storage",
+      "Magic Eraser"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "A012",
+    "product_title": "Apple Magic Keyboard",
+    "product_image": "https://i.ibb.co.com/3y0kybC/high-angle-white-keyboard-with-lights.jpg",
+    "category": "Accessories",
+    "price": 99,
+    "description": "Sleek and comfortable Apple Magic Keyboard with wireless Bluetooth connection.",
+    "specification": [
+      "Full-size keyboard",
+      "Bluetooth wireless",
+      "Rechargeable battery",
+      "Compact design",
+      "Compatible with Mac and iPad"
+    ],
+    "availability": true,
+    "rating": 4.7
+  }
+]
