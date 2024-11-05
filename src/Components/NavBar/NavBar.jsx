@@ -6,7 +6,7 @@ import { ListProvider } from "../../Provider/Provider";
 
 export default function NavBar() {
   const location = useLocation();
-  const {cart, wish} = useContext(ListProvider);
+  const { cart, wish } = useContext(ListProvider);
   const navs = [
     { id: 1, path: "/home", name: "Home" },
     { id: 2, path: "/statistics", name: "Statistics" },
@@ -65,16 +65,24 @@ export default function NavBar() {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className={`menu menu-horizontal px-1 ${
+        <ul
+          className={`menu menu-horizontal px-1 ${
             location.pathname === "/home" ? "text-white" : ""
-          }`}>{links}</ul>
+          }`}
+        >
+          {links}
+        </ul>
       </div>
       <div className="navbar-end gap-3">
         <a className="btn text-xl">
-          <MdOutlineShoppingCart />{cart.length}
+          <MdOutlineShoppingCart />
+          <sup>{cart.length}</sup>
         </a>
         <a className="btn text-xl">
-          <GiSelfLove />{wish.length}
+          <span className="text-red-700">
+            <GiSelfLove />
+          </span>
+          <sup>{wish.length}</sup>
         </a>
       </div>
     </div>

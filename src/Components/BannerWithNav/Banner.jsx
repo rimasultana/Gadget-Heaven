@@ -1,4 +1,6 @@
 import bgImg from "../../assets/banner.jpg";
+// import animation from "../../../public/animation.json"
+// import Lottie from "lottie-react";
 import NavBar from "../NavBar/NavBar";
 export default function Banner() {
   return (
@@ -21,6 +23,8 @@ export default function Banner() {
         <div className="w-2/3 mx-auto relative -bottom-20 border-4 border-white rounded-lg p-1">
           <div className="border-2 border-[#9538E2] rounded-lg overflow-hidden">
             <img className="rounded-lg" src={bgImg} alt="" />
+            {/* <Lottie animationData={animation} height={200} width='50px' loop={false} /> */}
+
           </div>
         </div>
       </div>
