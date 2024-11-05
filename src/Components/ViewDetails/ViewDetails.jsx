@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { ListProvider } from "../../Provider/Provider";
 import { FaSquare } from "react-icons/fa";
@@ -12,6 +12,8 @@ const ViewDetails = () => {
   const { id } = useParams();
   const { cart, wish, setCart, setWish } = useContext(ListProvider);
 
+  const [isWishClicked, setIsWishClicked] = useState(false);
+
   const singleProduct = data.find((p) => p.product_id === id);
   const {
     product_title,
@@ -24,19 +26,29 @@ const ViewDetails = () => {
   } = singleProduct;
 
   const handleClickCart = () => {
-    
-    toast.success("Successfully added item");
-    setCart([...cart, singleProduct]);
+    const isInCart = cart.some(
+      (item) => item.product_id === singleProduct.product_id
+    );
+
+    if (isInCart) {
+      toast.error("This item is already added to the cart");
+    } else {
+      setCart([...cart, singleProduct]);
+      toast.success("Successfully added item to cart");
+    }
   };
+
   const handleClickWish = () => {
-    toast.success("Added Wish List");
-    setWish([...wish, singleProduct]);
+    if (!isWishClicked) {
+      toast.success("Added to Wish List");
+      setWish([...wish, singleProduct]);
+      setIsWishClicked(true);
+    }
   };
-  console.log(wish);
-  console.log(cart);
+
   return (
     <>
-      <div className="text-center  bg-[#9538E2] w-full mb-24 h-80 flex flex-col items-center pt-10">
+      <div className="text-center bg-[#9538E2] w-full mb-24 h-80 flex flex-col items-center pt-10">
         <h1 className="text-3xl font-bold text-white">Product Details</h1>
         <p className="text-white">
           This typically includes details like product specifications, features,
@@ -50,11 +62,12 @@ const ViewDetails = () => {
             <img
               src={product_image}
               className="max-w-sm h-[400px] rounded-lg"
+              alt={product_title}
             />
             <div className="">
               <h1 className="text-4xl font-bold">{product_title}</h1>
               <p className="font-bold py-2">Price: ${price}</p>
-              <button className="btn  bg-green-200 text-green-600 rounded-full py-3">
+              <button className="btn bg-green-200 text-green-600 rounded-full py-3">
                 {availability ? "In Stock" : "Out of Stock"}
               </button>
               <p>{description}</p>
@@ -92,7 +105,10 @@ const ViewDetails = () => {
                 </button>
                 <button
                   onClick={handleClickWish}
-                  className="btn bg-white  rounded-full"
+                  className={`btn bg-white rounded-full ${
+                    isWishClicked ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  disabled={isWishClicked}
                 >
                   <GiSelfLove className="text-red-600 font-bold text-2xl" />
                 </button>

@@ -24,13 +24,13 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className="text-center  bg-[#9538E2] w-full mb-24 h-32 p-5 flex flex-col items-center justify-center">
-        <h1 className="text-3xl text-white">DashBord</h1>
-        <p>
+      <div className="text-center  bg-[#9538E2] w-full mb-24 h-80 flex flex-col items-center pt-10">
+        <h1 className="text-3xl text-white py-3">DashBord</h1>
+        <p className="text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
           officiis? Minus aliquid optio fuga repudiandae.
         </p>
-        <div className="flex gap-3">
+        <div className="flex gap-3 my-10">
           <div
             onClick={() => handleActivesButton("cartList")}
             className={`${
