@@ -20,7 +20,6 @@ This project utilizes the following React fundamental concepts:
 7. **Context API**: Used for state management and sharing data across components without prop drilling.
 8. **React Router**: To navigate between different views or pages within the app.
 9. **Conditional Rendering**: Displaying different UI elements based on conditions.
-10. **Forms and Validation**: Handling form input and validations.
 
 ## Data Handling and Management
 
