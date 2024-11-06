@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 const CartList = () => {
   const { cart, setCart } = useContext(ListProvider);
   const [disable, setDisable] = useState(false);
+
   const handleClickCart = (id) => {
     const updataCartData = cart.filter(
       (cartItem) => cartItem.product_id !== id
@@ -17,22 +18,17 @@ const CartList = () => {
   const totalCost = cart.reduce((sum, item) => sum + item.price, 0);
 
   const handleSortOrder = (order = "desc") => {
-    const sortedCart = [...cart]; 
-     sortedCart.sort((a, b) => {
+    const sortedCart = [...cart];
+    sortedCart.sort((a, b) => {
       const priceA = a.price ?? 0;
       const priceB = b.price ?? 0;
-
-      if (order === "asc") {
-        return priceA - priceB;
-      } else {
-        return priceB - priceA;
-      }
+      return order === "asc" ? priceA - priceB : priceB - priceA;
     });
-    setCart(sortedCart)
+    setCart(sortedCart);
   };
 
   const handlePurchase = () => {
-   setDisable(true)
+    setDisable(true);
     Swal.fire({
       title: "Payment successful!",
       html: `Thanks for your purchase!<br>Total: $${totalCost.toFixed(2)}`,
@@ -51,19 +47,21 @@ const CartList = () => {
 
   return (
     <>
-      <div className="flex justify-between w-4/5 mx-auto mt-14">
+      <div className="flex flex-wrap justify-between w-11/12 mx-auto mt-10">
         <div>
-          <h1 className="text-3xl font-bold">Cart</h1>
+          <h1 className="text-2xl md:text-3xl font-bold">Cart</h1>
         </div>
-        <div className="flex items-center gap-8">
-          <h1 className="text-2xl">Total cost: {totalCost.toFixed(2)}</h1>
-          <button onClick={() => handleSortOrder("desc")} disabled={disable} className="btn">Sort by Price</button>
+        <div className="flex flex-wrap items-center gap-4 md:gap-8">
+          <h1 className="text-xl md:text-2xl">Total cost: ${totalCost.toFixed(2)}</h1>
+          <button onClick={() => handleSortOrder("desc")} disabled={disable} className="btn">
+            Sort by Price
+          </button>
           <button onClick={handlePurchase} disabled={disable} className="btn">
             Purchase
           </button>
         </div>
       </div>
-      <div className="w-2/3 mx-auto">
+      <div className="w-11/12 md:w-2/3 mx-auto mt-8">
         {cart.length > 0 ? (
           cart.map((item) => {
             const {
@@ -76,23 +74,23 @@ const CartList = () => {
             return (
               <div
                 key={product_id}
-                className="flex justify-between p-3 my-4 shadow-lg"
+                className="flex flex-col md:flex-row justify-between items-center md:items-start p-4 my-4 shadow-lg rounded-lg"
               >
-                <div className="flex gap-4 items-center rounded-lg">
+                <div className="flex gap-4 items-center md:items-start w-full">
                   <img
                     src={product_image}
                     alt={product_title}
                     className="w-24 h-28 rounded-xl"
                   />
-                  <div className="space-y-2">
-                    <h2 className="text-xl font-bold">{product_title}</h2>
-                    <p>{description}</p>
-                    <p className="text-lg font-bold">Price: ${price}</p>
+                  <div className="space-y-2 w-full">
+                    <h2 className="text-lg md:text-xl font-bold">{product_title}</h2>
+                    <p className="text-sm md:text-base">{description}</p>
+                    <p className="text-md md:text-lg font-bold">Price: ${price}</p>
                   </div>
                 </div>
                 <button
                   onClick={() => handleClickCart(product_id)}
-                  className="text-red-500 text-2xl"
+                  className="text-red-500 text-2xl mt-2 md:mt-0"
                 >
                   <IoIosCloseCircleOutline />
                 </button>
@@ -101,7 +99,7 @@ const CartList = () => {
           })
         ) : (
           <div className="flex items-center justify-center py-10">
-            <p className="md:text-4xl text-2xl font-bold">Your cart is empty</p>
+            <p className="text-2xl md:text-4xl font-bold">Your cart is empty</p>
           </div>
         )}
       </div>

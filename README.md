@@ -23,12 +23,10 @@ This project utilizes the following React fundamental concepts:
 10. **Forms and Validation**: Handling form input and validations.
 
 ## Data Handling and Management
-For managing and handling data, the following methods have been used:
 
 - **Context API**: To handle global state management and share data across various components.
 
 
-## Features of the Website/Project
 
 ## Features of the Website/Project
 

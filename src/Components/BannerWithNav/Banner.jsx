@@ -1,6 +1,4 @@
 import bgImg from "../../assets/banner.jpg";
-// import animation from "../../../public/animation.json"
-// import Lottie from "lottie-react";
 import NavBar from "../NavBar/NavBar";
 export default function Banner() {
   return (
@@ -8,7 +6,7 @@ export default function Banner() {
       <div className="text-center rounded-lg bg-[#9538E2] w-full mb-24">
         <NavBar />
         <div className="text-white space-y-5 p-10">
-          <h1 className="text-5xl">
+          <h1 className="md:text-5xl text-3xl">
             Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories
           </h1>
           <p>
@@ -23,8 +21,6 @@ export default function Banner() {
         <div className="w-2/3 mx-auto relative -bottom-20 border-4 border-white rounded-lg p-1">
           <div className="border-2 border-[#9538E2] rounded-lg overflow-hidden">
             <img className="rounded-lg" src={bgImg} alt="" />
-            {/* <Lottie animationData={animation} height={200} width='50px' loop={false} /> */}
-
           </div>
         </div>
       </div>

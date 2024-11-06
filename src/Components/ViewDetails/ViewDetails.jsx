@@ -56,12 +56,12 @@ const ViewDetails = () => {
         </p>
       </div>
 
-      <div className="w-full lg:w-2/3 mx-auto shadow-2xl h-[280px]">
+      <div className="w-full lg:w-2/3 mx-auto shadow-2xl h-[280px] mb-42">
         <div className="hero bg-white relative -top-[250px] p-3 rounded-lg ">
           <div className="hero-content flex-col lg:flex-row">
             <img
               src={product_image}
-              className="max-w-sm h-[400px] rounded-lg"
+              className="w-full md:max-w-sm h-auto md:h-[400px] rounded-lg"
               alt={product_title}
             />
             <div className="">

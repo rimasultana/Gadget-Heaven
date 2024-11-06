@@ -9,7 +9,7 @@ export default function Footer() {
       </div>
       <div className="divider"></div>
 
-      <footer className="footer flex flex-col lg:flex-row items-center justify-around text-black p-10">
+      <footer className="footer flex flex-col lg:flex-row  justify-around text-black p-10">
         <nav>
           <h6 className="font-bold text-black">Services</h6>
           <a className="link link-hover">Product Support</a>
