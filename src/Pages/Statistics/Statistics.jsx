@@ -1,4 +1,3 @@
-import useTitle from "../../Hook/useTitle";
 import {
   ComposedChart,
   Bar,
@@ -11,9 +10,9 @@ import {
   YAxis,
 } from "recharts";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Statistics() {
-  useTitle("Statistics");
 
   const data = [
     { name: "Laptop", price: 90, rating: 4.5, total: 100 },
@@ -26,6 +25,9 @@ export default function Statistics() {
 
   return (
     <>
+      <Helmet>
+        <title>Statistics | Gadget Heaven</title>
+      </Helmet>
       <div className="text-center bg-[#9538E2] w-full h-60 flex flex-col items-center pt-10">
         <h1 className="text-3xl text-white py-3">Statistics</h1>
         <p className="text-white">

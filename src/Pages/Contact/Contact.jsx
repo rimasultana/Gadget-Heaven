@@ -1,15 +1,18 @@
 import animation from "../../../public/animation.json";
 import animation2 from "../../../public/animation-2.json";
 import { Player } from "@lottiefiles/react-lottie-player";
-import useTitle from "../../Hook/useTitle";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
+
 
 export default function Contact() {
-  useTitle("Contact");
   return (
     <>
+      <Helmet>
+        <title>Contact | Gadget</title>
+      </Helmet>
       <div className="w-2/3 mx-auto  bg-[#ecf0f1] rounded-md ">
         <div className="grid grid-cols-1 md:grid-cols-2 py-10 px-10">
           <div className="flex flex-col gap-3 ">

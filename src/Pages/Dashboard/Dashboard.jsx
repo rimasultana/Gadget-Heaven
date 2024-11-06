@@ -1,11 +1,9 @@
 import { useState } from "react";
 import CartList from "../../Components/CartList/CartList";
 import WishList from "../../Components/WishList/WishList";
-import useTitle from "../../Hook/useTitle";
-import animation from "../../../public/animation.json"
+import { Helmet } from "react-helmet-async";
 
 export default function Dashboard() {
-  useTitle("Dashboard")
 
   const [actives, setActives] = useState({
     available: true,
@@ -28,6 +26,9 @@ export default function Dashboard() {
 
   return (
     <>
+      <Helmet>
+        <title>Dashboard | Gadget</title>
+      </Helmet>
       <div className="text-center  bg-[#9538E2] w-full flex flex-col py-10 items-center">
         <h1 className="text-3xl text-white font-bold py-3">DashBord</h1>
         <p className="text-white">
