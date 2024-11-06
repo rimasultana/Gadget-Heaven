@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import NotFound from "../Pages/NotFound/NotFound";
 import Statistics from "../Pages/Statistics/Statistics";
 import ViewDetails from "../Components/ViewDetails/ViewDetails";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home />,
       },
       {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard />,
       },
+      {
+        path:"/contact",
+        element:<Contact/>
+      }
     ],
   },
 ]);

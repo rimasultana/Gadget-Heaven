@@ -10,7 +10,7 @@ export default function NotFound() {
           Sorry, the page you're looking for doesn't exist.
         </p>
         <Link
-          to="/home"
+          to="/"
           className="text-blue-500 hover:text-blue-700 font-medium text-lg"
         >
           Go back to Home

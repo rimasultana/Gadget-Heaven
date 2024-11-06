@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Skelton from "../Skilaton/Skilaton";
 
 const Products = () => {
   const [loader, setLoader] = useState(false);
@@ -35,19 +36,23 @@ const Products = () => {
       ? true
       : product.category === selectedCategory
   );
-
   return (
-    <div>
+    <div className="w-4/5 mx-auto">
       <h1 className="text-3xl text-center font-bold my-2">
         Explore Cutting-Edge Gadgets
       </h1>
       {loader ? (
-        <div className="flex justify-center items-center">
-          <span className="loading loading-bars loading-lg"></span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] mt-5 mx-auto">
+          <Skelton />
+          <Skelton />
+          <Skelton />
+          <Skelton />
+          <Skelton />
+          <Skelton />
         </div>
       ) : (
         <div className="flex flex-col md:flex-row w-full mx-auto">
-          <div className="w-full md:w-1/4 flex flex-col text-center gap-3 p-4">
+          <div className="w-full md:w-[20%] flex flex-col text-center gap-3 p-4">
             {categories.map((category) => (
               <div key={category} className="text-center">
                 <button
@@ -63,7 +68,7 @@ const Products = () => {
               </div>
             ))}
           </div>
-          <div className="w-full md:w-3/4 p-4">
+          <div className="w-full md:w-[80%] p-4">
             {filterProduct.length === 0 ? (
               <div className="flex justify-center items-center min-h-96">
                 <h1 className="font-bold text-3xl">

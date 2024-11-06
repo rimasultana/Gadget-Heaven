@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      {location.pathname === "/home" ? <Banner /> : <NavBar />}
-      <div>
+      {location.pathname === "/" ? <Banner /> : <NavBar />}
+      <div className="min-h-screen">
         <Outlet />
       </div>
       <Footer />

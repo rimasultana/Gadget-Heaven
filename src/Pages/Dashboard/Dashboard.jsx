@@ -1,8 +1,12 @@
 import { useState } from "react";
 import CartList from "../../Components/CartList/CartList";
 import WishList from "../../Components/WishList/WishList";
+import useTitle from "../../Hook/useTitle";
+import animation from "../../../public/animation.json"
 
 export default function Dashboard() {
+  useTitle("Dashboard")
+
   const [actives, setActives] = useState({
     available: true,
     status: "cartList",
@@ -24,13 +28,13 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className="text-center  bg-[#9538E2] w-full mb-24 h-80 flex flex-col items-center pt-10">
-        <h1 className="text-3xl text-white py-3">DashBord</h1>
+      <div className="text-center  bg-[#9538E2] w-full flex flex-col py-10 items-center">
+        <h1 className="text-3xl text-white font-bold py-3">DashBord</h1>
         <p className="text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
           officiis? Minus aliquid optio fuga repudiandae.
         </p>
-        <div className="flex gap-3 my-10">
+        <div className="flex gap-3 py-5">
           <div
             onClick={() => handleActivesButton("cartList")}
             className={`${

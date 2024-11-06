@@ -8,9 +8,10 @@ export default function NavBar() {
   const location = useLocation();
   const { cart, wish } = useContext(ListProvider);
   const navs = [
-    { id: 1, path: "/home", name: "Home" },
+    { id: 1, path: "/", name: "Home" },
     { id: 2, path: "/statistics", name: "Statistics" },
     { id: 3, path: "/dashboard", name: "Dashboard" },
+    { id: 4, path: "/contact", name: "Contact" },
   ];
   const links = (
     <>
@@ -58,7 +59,7 @@ export default function NavBar() {
         </div>
         <a
           className={`btn btn-ghost text-3xl font-bold hidden lg:block ${
-            location.pathname === "/home" ? "text-white" : ""
+            location.pathname === "/" ? "text-white" : ""
           }`}
         >
           Gadget Heaven
@@ -67,7 +68,7 @@ export default function NavBar() {
       <div className="navbar-center hidden lg:flex">
         <ul
           className={`menu menu-horizontal px-1 ${
-            location.pathname === "/home" ? "text-white" : ""
+            location.pathname === "/" ? "text-white" : ""
           }`}
         >
           {links}
