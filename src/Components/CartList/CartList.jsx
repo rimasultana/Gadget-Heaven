@@ -61,14 +61,14 @@ const CartList = () => {
         </div>
         <div className="flex flex-wrap items-center gap-4 md:gap-8">
           <h1 className="text-xl md:text-2xl">
-            Total cost: ${totalCost.toFixed(2)}
+            Total cost: {totalCost.toFixed(2)}
           </h1>
           <button
             onClick={() => handleSortOrder("desc")}
             disabled={disable}
             className="btn border-purple-700 text-purple-700 rounded-full"
           >
-            Sort by Price{" "}
+            Sort by Price
             <GiSettingsKnobs className="font-bold text-2xl text-purple-700" />
           </button>
           <button
