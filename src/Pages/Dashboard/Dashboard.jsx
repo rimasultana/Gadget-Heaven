@@ -27,7 +27,7 @@ export default function Dashboard() {
   return (
     <>
       <Helmet>
-        <title>Dashboard | Gadget</title>
+        <title>Dashboard | Gadget Heaven</title>
       </Helmet>
       <div className="text-center  bg-[#9538E2] w-full flex flex-col py-10 items-center">
         <h1 className="text-3xl text-white font-bold py-3">DashBord</h1>

@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact | Gadget</title>
+        <title>Contact | Gadget Heaven</title>
       </Helmet>
       <div className="w-2/3 mx-auto  bg-[#ecf0f1] rounded-md ">
         <div className="grid grid-cols-1 md:grid-cols-2 py-10 px-10">
