@@ -3,8 +3,12 @@ import { ListProvider } from "../../Provider/Provider";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import groupImg from "../../assets/Group.png";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { GiSettingsKnobs } from "react-icons/gi";
 
 const CartList = () => {
+  const navigation = useNavigate();
   const { cart, setCart } = useContext(ListProvider);
   const [disable, setDisable] = useState(false);
 
@@ -13,6 +17,7 @@ const CartList = () => {
       (cartItem) => cartItem.product_id !== id
     );
     setCart(updataCartData);
+    toast.success("Cart item removed!");
   };
 
   const totalCost = cart.reduce((sum, item) => sum + item.price, 0);
@@ -42,21 +47,35 @@ const CartList = () => {
       showConfirmButton: false,
     }).then(() => {
       setCart([]);
+      setTimeout(() => {
+        navigation("/");
+      }, 1000);
     });
   };
 
   return (
     <>
-      <div className="flex flex-wrap justify-between w-11/12 mx-auto mt-10">
+      <div className="flex flex-wrap justify-between w-4/5 mx-auto mt-10">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold">Cart</h1>
         </div>
         <div className="flex flex-wrap items-center gap-4 md:gap-8">
-          <h1 className="text-xl md:text-2xl">Total cost: ${totalCost.toFixed(2)}</h1>
-          <button onClick={() => handleSortOrder("desc")} disabled={disable} className="btn">
-            Sort by Price
+          <h1 className="text-xl md:text-2xl">
+            Total cost: ${totalCost.toFixed(2)}
+          </h1>
+          <button
+            onClick={() => handleSortOrder("desc")}
+            disabled={disable}
+            className="btn border-purple-700 text-purple-700 rounded-full"
+          >
+            Sort by Price{" "}
+            <GiSettingsKnobs className="font-bold text-2xl text-purple-700" />
           </button>
-          <button onClick={handlePurchase} disabled={disable} className="btn">
+          <button
+            onClick={handlePurchase}
+            disabled={disable}
+            className="btn border-purple-700 rounded-full text-white bg-purple-700"
+          >
             Purchase
           </button>
         </div>
@@ -83,9 +102,13 @@ const CartList = () => {
                     className="w-24 h-28 rounded-xl"
                   />
                   <div className="space-y-2 w-full">
-                    <h2 className="text-lg md:text-xl font-bold">{product_title}</h2>
+                    <h2 className="text-lg md:text-xl font-bold">
+                      {product_title}
+                    </h2>
                     <p className="text-sm md:text-base">{description}</p>
-                    <p className="text-md md:text-lg font-bold">Price: ${price}</p>
+                    <p className="text-md md:text-lg font-bold">
+                      Price: ${price}
+                    </p>
                   </div>
                 </div>
                 <button

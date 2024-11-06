@@ -67,7 +67,7 @@ const ViewDetails = () => {
             <div className="">
               <h1 className="text-4xl font-bold">{product_title}</h1>
               <p className="font-bold py-2">Price: ${price}</p>
-              <button className="btn bg-green-200 text-green-600 rounded-full py-3">
+              <button className="btn bg-green-200 text-green-600 rounded-full">
                 {availability ? "In Stock" : "Out of Stock"}
               </button>
               <p>{description}</p>

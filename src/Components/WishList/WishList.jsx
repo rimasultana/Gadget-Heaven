@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { ListProvider } from "../../Provider/Provider";
+import toast from "react-hot-toast";
 
 const WishList = () => {
   const { wish, setWish } = useContext(ListProvider);
@@ -8,6 +9,7 @@ const WishList = () => {
   const handleClickWish = (id) => {
     const updatedWishList = wish.filter((item) => item.product_id !== id);
     setWish(updatedWishList);
+    toast.success("Wish list item removed!")
   };
 
   return (

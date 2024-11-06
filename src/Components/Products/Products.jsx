@@ -90,7 +90,7 @@ const Products = () => {
                       <h2 className="card-title">{product.product_title}</h2>
                       <p>Price: {product.price}K</p>
                       <Link to={`/view/${product.product_id}`}>
-                        <button className="btn hover:bg-[#9538E2] hover:text-white text-[#9538E2] border-2 border-[#9538E2]">
+                        <button className="btn text-center hover:bg-[#9538E2] hover:text-white text-[#9538E2] border-2 border-[#9538E2]">
                           View Details
                         </button>
                       </Link>

@@ -7,7 +7,7 @@ export default function Footer() {
           Leading the way in cutting-edge technology and innovation.
         </p>
       </div>
-      <div className="divider"></div>
+      <div className="divider w-4/5 mx-auto"></div>
 
       <footer className="footer flex flex-col lg:flex-row  justify-around text-black p-10">
         <nav>
