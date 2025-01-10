@@ -185,22 +185,6 @@
     ],
     "availability": true,
     "rating": 4.5
-  },
-  {
-    "product_id": "A012",
-    "product_title": "Apple Magic Keyboard",
-    "product_image": "https://i.ibb.co.com/3y0kybC/high-angle-white-keyboard-with-lights.jpg",
-    "category": "Accessories",
-    "price": 99,
-    "description": "Sleek and comfortable Apple Magic Keyboard with wireless Bluetooth connection.",
-    "specification": [
-      "Full-size keyboard",
-      "Bluetooth wireless",
-      "Rechargeable battery",
-      "Compact design",
-      "Compatible with Mac and iPad"
-    ],
-    "availability": true,
-    "rating": 4.7
   }
 ]
+
